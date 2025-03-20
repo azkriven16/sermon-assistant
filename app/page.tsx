@@ -3,6 +3,8 @@
 import type React from "react";
 
 import { useState, useCallback, useEffect, useRef } from "react";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import {
@@ -15,7 +17,6 @@ import {
 } from "@/components/ui/card";
 import {
     Trash2,
-    BookOpen,
     Languages,
     Lightbulb,
     AlertTriangle,
@@ -461,6 +462,7 @@ export default function SermonHelper() {
 
     return (
         <div className="flex flex-col min-h-screen bg-background">
+            <Header />
             <div className="flex flex-1 container mx-auto p-2 sm:p-4 pt-4 sm:pt-8">
                 {/* Main Chat Area */}
                 <div className="w-full max-w-3xl mx-auto">
@@ -470,7 +472,6 @@ export default function SermonHelper() {
                             <div className="flex flex-col sm:hidden space-y-2">
                                 <div className="flex items-center justify-between">
                                     <div className="flex items-center gap-2">
-                                        <BookOpen className="h-5 w-5" />
                                         <CardTitle className="text-lg">
                                             Sermon Assistant
                                         </CardTitle>
@@ -478,21 +479,21 @@ export default function SermonHelper() {
                                     <div className="flex items-center gap-1">
                                         <Badge
                                             variant="outline"
-                                            className={
+                                            className={`${
                                                 language === "english"
                                                     ? "bg-blue-100"
                                                     : "bg-green-100"
-                                            }
+                                            } dark:text-black`}
                                         >
                                             {language === "english"
-                                                ? "EN"
-                                                : "HI"}
+                                                ? "English"
+                                                : "Hiligaynon"}
                                         </Badge>
                                         <Button
                                             variant="outline"
                                             size="icon"
                                             onClick={toggleLanguage}
-                                            className="h-8 w-8"
+                                            className="h-8 w-8 dark:bg-opacity-70"
                                         >
                                             <Languages className="h-4 w-4" />
                                         </Button>
@@ -513,31 +514,30 @@ export default function SermonHelper() {
                                 <CardDescription className="text-xs">
                                     {language === "english"
                                         ? "Ask for help with sermon preparation, Bible study, or theological questions"
-                                        : "Pangayo sang bulig sa paghanda sang sermon, pagtuon sang Bibliya, ukon theological nga mga pamangkot"}
+                                        : "Pangayo sang bulig sa paghanda sang sermon, pagtuon sang Bibliya."}
                                 </CardDescription>
                             </div>
 
                             {/* Desktop Header */}
                             <div className="hidden sm:flex flex-row items-center justify-between">
                                 <div className="flex items-center gap-2">
-                                    <BookOpen className="h-5 w-5" />
                                     <div>
                                         <CardTitle>Sermon Assistant</CardTitle>
                                         <CardDescription>
                                             {language === "english"
                                                 ? "Ask for help with sermon preparation, Bible study, or theological questions"
-                                                : "Pangayo sang bulig sa paghanda sang sermon, pagtuon sang Bibliya, ukon theological nga mga pamangkot"}
+                                                : "Pangayo sang bulig sa paghanda sang sermon, pagtuon sang Bibliya."}
                                         </CardDescription>
                                     </div>
                                 </div>
                                 <div className="flex items-center gap-2">
                                     <Badge
                                         variant="outline"
-                                        className={
+                                        className={`${
                                             language === "english"
                                                 ? "bg-blue-100"
                                                 : "bg-green-100"
-                                        }
+                                        } dark:text-black`}
                                     >
                                         {language === "english"
                                             ? "English"
@@ -577,7 +577,6 @@ export default function SermonHelper() {
                         <CardContent className="flex-1 overflow-y-auto space-y-4 h-0 px-3 sm:px-6">
                             {messages.length === 0 && !error && (
                                 <div className="text-center text-muted-foreground my-8 flex flex-col items-center gap-2">
-                                    <BookOpen className="h-12 w-12 text-primary/30" />
                                     <p className="text-lg font-medium">
                                         {language === "english"
                                             ? "Welcome to Sermon Helper"
@@ -586,7 +585,7 @@ export default function SermonHelper() {
                                     <p className="max-w-md text-sm sm:text-base">
                                         {language === "english"
                                             ? "Ask for help with sermon preparation, Bible study, or theological questions. You can also use the suggestion buttons below."
-                                            : "Pangayo sang bulig sa paghanda sang sermon, pagtuon sang Bibliya, ukon theological nga mga pamangkot. Pwede ka man maggamit sang mga suggestion buttons sa idalom."}
+                                            : "Pangayo sang bulig sa paghanda sang sermon, pagtuon sang Bibliya.. Pwede ka man maggamit sang mga suggestion buttons sa idalom."}
                                     </p>
                                 </div>
                             )}
@@ -734,8 +733,8 @@ export default function SermonHelper() {
                                         >
                                             {showAllSuggestions
                                                 ? language === "english"
-                                                    ? "Show Less"
-                                                    : "Ipakita ang Mas Diutay"
+                                                    ? "Show Less ..."
+                                                    : "Ipakita ang Mas Diutay ..."
                                                 : language === "english"
                                                 ? "More Ideas..."
                                                 : "Mas Madamo nga Ideya..."}
@@ -852,6 +851,7 @@ export default function SermonHelper() {
                     </Card>
                 </div>
             </div>
+            <Footer />
         </div>
     );
 }
