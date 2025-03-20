@@ -19,7 +19,7 @@ const Header = () => {
                 </div>
                 <div className="flex gap-x-2">
                     <Tooltip>
-                        <TooltipTrigger>
+                        <TooltipTrigger asChild>
                             <Button asChild size="icon" variant="secondary">
                                 <a
                                     href="https://sermon-assistant.vercel.app/sitemap.xml"
@@ -37,7 +37,7 @@ const Header = () => {
                         </TooltipContent>
                     </Tooltip>
                     <Tooltip>
-                        <TooltipTrigger>
+                        <TooltipTrigger asChild>
                             <ThemeToggle />
                         </TooltipTrigger>
                         <TooltipContent>
