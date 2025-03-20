@@ -1,10 +1,66 @@
 # Sermon Assistant
 
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+![Screenshot](/public/screenshot.png)
+
+
+
+## Purpose and Uses
+
+This application is designed to assist pastors and sermon creators in organizing their thoughts, scriptures, and key points for effective sermon delivery. It can be used to:
+
+- Structure sermon outlines
+- Organize relevant scriptures
+- Keep track of key points
+- Facilitate effective sermon delivery
+
+## Features
+
+- Sermon Outlines
+- Scripture Organization
+- Key Point Tracking
+- Sermon Delivery
+
+## Tech Stack
+
+- Next.js
+- TypeScript
+- Tailwind CSS
+- Shadcn- UI
+- @google/generative-ai
+- lucide-react
+- react-markdown
+
+## Why I built this
+
+This project was inspired by my mom, a pastor, to help her create more structured sermons. The goal is to provide a tool that assists in organizing thoughts, scriptures, and key points for effective sermon delivery.
 
 ## Getting Started
 
-First, run the development server:
+1. Clone the repository:
+
+```bash
+git clone https://github.com/azkriven16/sermon-assistant
+```
+
+2. Navigate into the directory:
+
+```bash
+cd sermon-assistant
+```
+
+3. Install dependencies:
+
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+# or
+bun install
+```
+
+4. Run the development server:
 
 ```bash
 npm run dev
@@ -19,24 +75,3 @@ bun dev
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load fonts.
-
-## Learn More
-
-To learn more about the Sermon Assistant and its features, take a look at the following resources:
-
--   [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
--   [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Sermon Assistant GitHub repository](https://github.com/yourusername/sermon-assistant) - your feedback and contributions are welcome!
-
-## Tech Stack Inspiration
-
-This project was inspired by my mom, a pastor, to help her create more structured sermons. The goal is to provide a tool that assists in organizing thoughts, scriptures, and key points for effective sermon delivery.
-
-## Deploy on Vercel
-
-The easiest way to deploy your Sermon Assistant app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
